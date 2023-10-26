@@ -52,3 +52,7 @@ Today, I accomplished character movement and implemented a simple camera follow 
    ```
 
 4. I also used a physicsMaterial2D to eliminate friction, preventing the character from sticking to the environment. Additionally, by selecting "Collision Detection" as "Continuous," I implemented a feature that calculates whether objects will collide before the collision occurs, allowing them to stop before entering each other.
+
+## Development Day 3: 2023.10.26
+
+Today, I learned a few new things. One of them is how to use sprite sheets to create 2D maps, which will be very useful in future development. I even drew my first map, and it feels great. Secondly, I studied some aspects of camera following in 2D games and gained insights into the principles of implementing various mechanisms, including invincibility frames.
