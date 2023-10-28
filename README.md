@@ -56,3 +56,11 @@ Today, I accomplished character movement and implemented a simple camera follow 
 ## Development Day 3: 2023.10.26
 
 Today, I learned a few new things. One of them is how to use sprite sheets to create 2D maps, which will be very useful in future development. I even drew my first map, and it feels great. Secondly, I studied some aspects of camera following in 2D games and gained insights into the principles of implementing various mechanisms, including invincibility frames.
+
+
+
+## Development Day 4: 2023.10.28
+
+Today I sat in front of the computer all day and got more and more addicted. By now, I feel like I have a general idea of the content of Unity, but I’m more interested in how the teacher thinks about all the mechanisms and expressions, and how to make the game more detailed. However, I still learned a lot today. I learned how to create item pickups and how to convert special effects. After careful consideration, I found that when implementing an animation that only plays once, one way is to destroy the object after a certain amount of time, and fix the animation execution time to a certain period. Then, before the animation finishes playing and enters the next round of looping, you can destroy the game entity used by the animation.
+
+Another knowledge is to put several sprite maps in a game entity, which can make it easier to operate jumping or three-dimensional moving game characters.
