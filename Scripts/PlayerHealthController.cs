@@ -57,6 +57,9 @@ public class PlayerHealthController : MonoBehaviour
                 //播放死亡动画
                 Instantiate(deathEffect, transform.position, transform.rotation);
 
+                //播放爆炸音效
+                AudioManager.instance.PlaySoundEffect(10);
+
                 //gameObject.SetActive(false);
 
                 //将执行权交给LevelManager

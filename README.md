@@ -64,3 +64,23 @@ Today, I learned a few new things. One of them is how to use sprite sheets to cr
 Today I sat in front of the computer all day and got more and more addicted. By now, I feel like I have a general idea of the content of Unity, but I’m more interested in how the teacher thinks about all the mechanisms and expressions, and how to make the game more detailed. However, I still learned a lot today. I learned how to create item pickups and how to convert special effects. After careful consideration, I found that when implementing an animation that only plays once, one way is to destroy the object after a certain amount of time, and fix the animation execution time to a certain period. Then, before the animation finishes playing and enters the next round of looping, you can destroy the game entity used by the animation.
 
 Another knowledge is to put several sprite maps in a game entity, which can make it easier to operate jumping or three-dimensional moving game characters.
+
+
+
+## Development Day 5: 2023.10.29
+
+Today is the fifth day of development, and the sound effects part of the game has been completed. Starting tomorrow, we will begin to create some game panels. The tutorial is really well taught. The knowledge points learned today are listed below:
+
+1. Animation curves in Animator
+
+2. Adding restrictions in code
+
+   ```C#
+       [Range(0,100)] public float chanceToDrop; //[Range(0,100)] restricts the value of chanceToDrop to be between 0-100
+   ```
+
+3. Unity3D sound controls
+
+   1. Sound play and stop
+   2. Sound adjustment: pitch
+   3. AudioMixer

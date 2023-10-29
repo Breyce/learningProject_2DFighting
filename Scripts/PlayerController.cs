@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
     public float knockBackLength, knockBackForce;
     private float knockBackCounter;
 
+    //击杀怪物后的反弹效果
+    public float bounceForce;
+
     private void Awake()
     {
         instance = this;
@@ -45,6 +48,9 @@ public class PlayerController : MonoBehaviour
             {
                 if (isGrounded)
                 {
+                    //播放跳跃音效
+                    AudioManager.instance.PlaySoundEffect(9);
+
                     canDoubleJump = true;
                     theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
                 }
@@ -52,6 +58,9 @@ public class PlayerController : MonoBehaviour
                 {
                     if (canDoubleJump)
                     {
+                        //播放跳跃音效
+                        AudioManager.instance.PlaySoundEffect(9);
+
                         canDoubleJump = false;
                         theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
                     }
@@ -93,5 +102,17 @@ public class PlayerController : MonoBehaviour
 
         //切换受伤动画
         anim.SetTrigger("hurt");
+
+        //播放击退音效
+        AudioManager.instance.PlaySoundEffect(8);
+    }
+
+    //击杀怪物后反弹
+    public void Bounce()
+    {
+        theRB.velocity = new Vector2(theRB.velocity.x, bounceForce);
+
+        //播放跳跃音效
+        AudioManager.instance.PlaySoundEffect(9);
     }
 }

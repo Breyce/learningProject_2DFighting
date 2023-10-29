@@ -13,24 +13,15 @@ public class PickUp : MonoBehaviour
     //捡起特效
     public GameObject pickupEffect;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !isCollected)
         {
             if (isGem)
             {
+                //播放捡起音效
+                AudioManager.instance.PlaySoundEffect(6);
+
                 LevelManager.instance.gemsCollected ++;
 
                 isCollected = true;
@@ -45,6 +36,9 @@ public class PickUp : MonoBehaviour
 
             if (isHeal && PlayerHealthController.instance.currentHealth != PlayerHealthController.instance.maxHealth)
             {
+                //播放捡起音效
+                AudioManager.instance.PlaySoundEffect(7);
+
                 PlayerHealthController.instance.HealPlayer(2);
 
                 isCollected = true;
