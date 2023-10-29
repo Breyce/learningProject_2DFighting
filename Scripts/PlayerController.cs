@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
     //击杀怪物后的反弹效果
     public float bounceForce;
 
+    //游戏结束
+    public bool stopInput;
+
     private void Awake()
     {
         instance = this;
@@ -39,56 +42,59 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(knockBackCounter <= 0)
+        if (!PauseMenu.instance.isPaused && !stopInput)
         {
-            theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), theRB.velocity.y);
-
-            isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
-            if (Input.GetButtonDown("Jump"))
+            if (knockBackCounter <= 0)
             {
-                if (isGrounded)
-                {
-                    //播放跳跃音效
-                    AudioManager.instance.PlaySoundEffect(9);
+                theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), theRB.velocity.y);
 
-                    canDoubleJump = true;
-                    theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
-                }
-                else
+                isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
+                if (Input.GetButtonDown("Jump"))
                 {
-                    if (canDoubleJump)
+                    if (isGrounded)
                     {
                         //播放跳跃音效
                         AudioManager.instance.PlaySoundEffect(9);
 
-                        canDoubleJump = false;
+                        canDoubleJump = true;
                         theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
                     }
+                    else
+                    {
+                        if (canDoubleJump)
+                        {
+                            //播放跳跃音效
+                            AudioManager.instance.PlaySoundEffect(9);
+
+                            canDoubleJump = false;
+                            theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+                        }
+                    }
                 }
-            }
 
-            if (theRB.velocity.x < 0)
-            {
-                theSR.flipX = true;
-            }
-            else if (theRB.velocity.x > 0)
-            {
-                theSR.flipX = false;
-            }
+                if (theRB.velocity.x < 0)
+                {
+                    theSR.flipX = true;
+                }
+                else if (theRB.velocity.x > 0)
+                {
+                    theSR.flipX = false;
+                }
 
-        } else
-        {
-            knockBackCounter -= Time.deltaTime;
-            if(!theSR.flipX)
-            {
-                theRB.velocity = new Vector2(-knockBackForce, theRB.velocity.y);
             }
             else
             {
-                theRB.velocity = new Vector2(knockBackForce, theRB.velocity.y);
+                knockBackCounter -= Time.deltaTime;
+                if (!theSR.flipX)
+                {
+                    theRB.velocity = new Vector2(-knockBackForce, theRB.velocity.y);
+                }
+                else
+                {
+                    theRB.velocity = new Vector2(knockBackForce, theRB.velocity.y);
+                }
             }
         }
-
 
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));

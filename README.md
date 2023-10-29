@@ -84,3 +84,12 @@ Today is the fifth day of development, and the sound effects part of the game ha
    1. Sound play and stop
    2. Sound adjustment: pitch
    3. AudioMixer
+
+4. Settings for UI buttons and sprite configuration:
+
+   1. In Sprite, you can set a central area to automatically complete the surrounding edge graphics by cutting.
+   2. The Pannel component in UI.
+
+5. Unity scene switching and level design.
+
+6. Time.timeScale
