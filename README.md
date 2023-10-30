@@ -93,3 +93,11 @@ Today is the fifth day of development, and the sound effects part of the game ha
 5. Unity scene switching and level design.
 
 6. Time.timeScale
+
+## Development Day 6: 2023.10.30
+
+The new knowledge points I came across today are as follows:
+
+1. The overlay function of two layers in TileMap.
+2. The difference between GetAxisRaw and GetAxis: GetAxis returns a value that gradually increases from 0 to 1, while GetAxisRaw only returns 0 or 1.
+3. Vector3.MoveTowards and Mathf.MoveTowards
