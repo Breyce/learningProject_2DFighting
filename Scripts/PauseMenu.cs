@@ -49,6 +49,9 @@ public class PauseMenu : MonoBehaviour
 
     public void LevelSelect()
     {
+        //记录PlayerMark到当前关卡位置
+        PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name);
+
         SceneManager.LoadScene(levelSelect);
         Time.timeScale = 1.0f;
     }

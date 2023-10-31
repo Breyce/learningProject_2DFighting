@@ -105,7 +105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3728589471549811298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.763165, y: 0.7416935, z: -11.135095}
+  m_LocalPosition: {x: -42.34, y: -0.26, z: -11.135095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -329,7 +329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3728589471829385989}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.154789, y: 1.0266075, z: -11.094078}
+  m_LocalPosition: {x: 9.154789, y: -0.01, z: -11.094078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -549,7 +549,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitToRespawn: 2
   gemsCollected: 0
-  levelToLoad: Main_Menu
+  levelToLoad: LevelSelect
+  timeInLevel: 0
 --- !u!1 &3728589472231377460
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +577,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3728589472231377460}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -39.907677, y: -9.423392, z: -11.205015}
+  m_LocalPosition: {x: -39.907677, y: -4.8, z: -11.205015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1257,7 +1258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3e66dbb6240d545a0472e9a6d7fd9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSelect: 
+  levelSelect: LevelSelect
   mainMenu: Main_Menu
   pauseScreen: {fileID: 3728589471791436443}
   isPaused: 0
@@ -1397,7 +1398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1718,7 +1719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8490955729192807394, guid: c50feb3de69b71740b1672f6962addf0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0166075
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8490955729192807394, guid: c50feb3de69b71740b1672f6962addf0, type: 3}
       propertyPath: m_LocalPosition.z

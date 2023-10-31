@@ -13,11 +13,37 @@ public class MapPoints : MonoBehaviour
 
     public int gemsCollected, totalGems;
     public float bestTime, targetTime;
+
+    //展示小图标
+    public GameObject badgeClock, badgeGem;
     // Start is called before the first frame update
     void Start()
     {
         if (isLevel && levelToLoad != null)
         {
+            //展示关卡信息
+            if(PlayerPrefs.HasKey(levelToLoad + "_gems"))
+            {
+                gemsCollected = PlayerPrefs.GetInt(levelToLoad + "_gems");
+            }
+
+            if (PlayerPrefs.HasKey(levelToLoad + "_time"))
+            {
+                bestTime = PlayerPrefs.GetFloat(levelToLoad + "_time");
+            }
+
+            //展示小图标
+            if (gemsCollected >= totalGems)
+            {
+                badgeGem.SetActive(true);
+            }
+
+            if (bestTime <= targetTime && bestTime != 0f)
+            {
+                badgeClock.SetActive(true);
+            }
+
+
             isLocked = true;
 
             if(levelToCheck != null)

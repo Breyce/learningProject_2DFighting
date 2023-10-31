@@ -76,5 +76,7 @@ public class LevelSelectPlayer : MonoBehaviour
     {
         currentPoint = nextPoint;
         LevelSelectUIController.instance.HideInfo();
+        //≤•∑≈“Ù–ß
+        AudioManager.instance.PlaySoundEffect(5);
     }
 }

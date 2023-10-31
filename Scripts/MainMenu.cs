@@ -5,11 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public string startScence;
+    public string startScence, continueScene;
+
+    public GameObject continueButton;
+
+    void Start()
+    {
+        if (PlayerPrefs.HasKey(startScence + "_unlocked"))
+        {
+            continueButton.SetActive(true);
+        }
+        else
+        {
+            continueButton.SetActive(false);
+        }
+    }
 
     public void StartGame()
     {
         SceneManager.LoadScene(startScence);
+        PlayerPrefs.DeleteAll();
+    }
+
+    public void ContinueGame()
+    {
+        SceneManager.LoadScene(continueScene);
     }
 
     public void QuitGame()

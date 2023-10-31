@@ -875,34 +875,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3728589471549811324, guid: b8cf684010117dd4f9dc630d1b5f5173, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -42.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 3728589471549811324, guid: b8cf684010117dd4f9dc630d1b5f5173, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 3728589471829385991, guid: b8cf684010117dd4f9dc630d1b5f5173, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 3728589472075258639, guid: b8cf684010117dd4f9dc630d1b5f5173, type: 3}
-      propertyPath: levelToLoad
-      value: LevelSelect
-      objectReference: {fileID: 0}
-    - target: {fileID: 3728589472231377463, guid: b8cf684010117dd4f9dc630d1b5f5173, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3728589473057721622, guid: b8cf684010117dd4f9dc630d1b5f5173, type: 3}
-      propertyPath: levelSelect
-      value: LevelSelect
-      objectReference: {fileID: 0}
-    - target: {fileID: 5074276265946640495, guid: b8cf684010117dd4f9dc630d1b5f5173, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.03
-      objectReference: {fileID: 0}
     - target: {fileID: 6827284077394714627, guid: b8cf684010117dd4f9dc630d1b5f5173, type: 3}
       propertyPath: m_RootOrder
       value: 3

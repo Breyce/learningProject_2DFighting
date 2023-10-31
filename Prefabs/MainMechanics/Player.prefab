@@ -77,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 602846867
-  m_SortingLayer: 1
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1447544003, guid: d0ff653f4b4d3f14dab1926a9ed3efb6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -145,7 +145,11 @@ MonoBehaviour:
   groundCheckPoint: {fileID: 8490955729721672422}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
+  knockBackLength: 0
+  knockBackForce: 0
+  bounceForce: 0
+  stopInput: 0
 --- !u!95 &8490955729192807398
 Animator:
   serializedVersion: 5
@@ -181,6 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 0
+  invincibleLength: 1
+  deathEffect: {fileID: 0}
 --- !u!1 &8490955729721672423
 GameObject:
   m_ObjectHideFlags: 0

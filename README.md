@@ -101,3 +101,15 @@ The new knowledge points I came across today are as follows:
 1. The overlay function of two layers in TileMap.
 2. The difference between GetAxisRaw and GetAxis: GetAxis returns a value that gradually increases from 0 to 1, while GetAxisRaw only returns 0 or 1.
 3. Vector3.MoveTowards and Mathf.MoveTowards
+
+
+
+## Development Day 7: 2023.10.31
+
+Today, I implemented the functionality of creating a new game and continuing a game from the main interface, completed the development of level selection, and finally created two game entities in the game: platform and moving platform. The new knowledge points I came across today are as follows:
+
+1. Setting **PlayerPrefs** to implement storage and loading.
+2. **Raycast Target**, if checked, means that this layer can be clicked and will mask the content behind it.
+3. **Edge Collider**: A collider with only one line.
+4. **Platform Effector**: Adds effects to the platform, can set one-way platform function, its displayed semicircular graphic prompt indicates that the game entity entering from the side corresponding to the semicircular arc will collide with the platform, and those entering from the side of the semicircular radius will not.
+5. Designed a moving platform using **OnCollisionEnter2D** API.
