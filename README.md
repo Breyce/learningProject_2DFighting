@@ -113,3 +113,31 @@ Today, I implemented the functionality of creating a new game and continuing a g
 3. **Edge Collider**: A collider with only one line.
 4. **Platform Effector**: Adds effects to the platform, can set one-way platform function, its displayed semicircular graphic prompt indicates that the game entity entering from the side corresponding to the semicircular arc will collide with the platform, and those entering from the side of the semicircular radius will not.
 5. Designed a moving platform using **OnCollisionEnter2D** API.
+
+## Development Day 8: 2023.11.1
+
+Today, I clearly realized the matter about Collider. The function OnTriggerEnter2D is bound to the game entity bound by the C# script. If it is to be triggered, this game entity must add a Collider. The Collider of a child object cannot trigger the function of the parent object, and similarly, the collider of the parent object cannot trigger the function on the child object.
+
+1. [Header(“Movement”)]: You can add variable partitions in the Unity panel to make variable lookup more convenient. It cannot be used when there are no variables in the following text. If you add a Header to a statement that declares multiple variables, it will add this Header to each variable.
+
+   ```
+       [Header("Shooting")]//Normal declaration
+       public GameObject bullets;
+       public Transform firePoint;
+       public float timeBetweenShots;
+       private int bulletCounter;
+       
+       [Header("Movement")]//Adding a Header to a statement that declares multiple variables
+       public Transform leftPoint, rightPoint;
+       
+       [Header("Hurt")]//Incorrect declaration
+   	(No variables follow)
+   ```
+
+2. When you only want some programs to run in Unity for debugging and do not want players to use them, you can use:
+
+   ```
+   #if UNITY_EDITOR
+   	......
+   #endif
+   ```

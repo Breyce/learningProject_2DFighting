@@ -121,4 +121,21 @@ public class PlayerController : MonoBehaviour
         //播放跳跃音效
         AudioManager.instance.PlaySoundEffect(9);
     }
+
+    //在平台上面走
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Platform")
+        {
+            transform.parent = other.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Platform")
+        {
+            transform.parent = null;
+        }
+    }
 }
