@@ -118,6 +118,8 @@ Today, I implemented the functionality of creating a new game and continuing a g
 
 Today, I clearly realized the matter about Collider. The function OnTriggerEnter2D is bound to the game entity bound by the C# script. If it is to be triggered, this game entity must add a Collider. The Collider of a child object cannot trigger the function of the parent object, and similarly, the collider of the parent object cannot trigger the function on the child object.
 
+ The new knowledge points I came across today are as follows:
+
 1. [Header(“Movement”)]: You can add variable partitions in the Unity panel to make variable lookup more convenient. It cannot be used when there are no variables in the following text. If you add a Header to a statement that declares multiple variables, it will add this Header to each variable.
 
    ```
@@ -141,3 +143,16 @@ Today, I clearly realized the matter about Collider. The function OnTriggerEnter
    	......
    #endif
    ```
+
+## Development Day 9: 2023.11.2
+
+The development has ended, but rather than saying it’s over, it’s more like after learning a lot, it’s time to look for a new beginning.
+
+These past few days, I’ve really benefited a lot from this tutorial. My understanding of Unity has become more detailed and systematic. If this was the first tutorial I learned from, perhaps I wouldn’t have felt so uncomfortable at the beginning.
+
+However, I do have a few small questions about this tutorial, perhaps because I just started developing games and am not very familiar with the overall style of the code. One is that there are too many nested if statements in this tutorial. I remember the deepest one had four layers of nesting. This “nesting hell” honestly would have confused me if I had to think about it myself. I also tried to optimize a few nests, but in the end, I chose to focus on learning Unity and just went with the flow. The second one comes from the teacher’s coding habits. In the entire 113-episode tutorial, the teacher only wrote one line of comments. There’s no problem for teaching, but in the later stages, if I didn’t add comments when following along, I would be dazzled by the search - the teacher didn’t have any, which shows a high level of skill. The third one is the teacher’s general way of solving problems. The teacher’s way of solving problems is somewhat like brute force, so there are many variables, and they are sorted out one by one with if statements. Later on, I thought carefully and realized that this method is the fastest and most effective way, even if there are a lot of variable names. However, this is normal for object-oriented languages.
+
+ The new knowledge points I came across today are as follows:
+
+1. If you just want to change the direction of a character in a 2D game, you can flip the sprite image to get it. If you want to flip along with the child objects, you can set the value of the flip axis in Scale of the parent object to its opposite number (e.g., set x from 1 to -1 when flipping horizontally).
+2. Vector3.one: It’s a vector of (0,0,0).
